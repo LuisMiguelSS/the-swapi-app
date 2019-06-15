@@ -16,10 +16,10 @@
 		RewriteRule ^/?peliculas/?$ /peliculas.php
 
 		# Personajes
-		RewriteRule ^/?personajes/?$ /peliculas.php
+		RewriteRule ^/?personajes/?$ /personajes.php
 
 		# Otros - Buscador General
-		RewriteRule ^/?buscar/?$ /peliculas.php
+		RewriteRule ^/?buscar/?$ /buscador.php
 
 		#May 4th - 4 de mayo (día)
 		RewriteRule ^/?may4/?$ /4mayo.php

@@ -1,0 +1,30 @@
+// Variables
+@swYellow: #FFE300;
+
+// Star Jedi Font
+@font-face {
+	font-family: 'star_jediregular';
+	src: url('fonts/starjedi-webfont.woff2') format('woff2'),
+		url('fonts/starjedi-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.navbar {
+
+	.site-logo {
+		font-family: 'star_jediregular';
+		text-transform: uppercase;
+		color: @swYellow;
+
+		&:hover {
+			color: @swYellow;
+		}
+	}
+
+	i {
+		vertical-align: middle;
+	}
+}
+

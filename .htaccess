@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+
+	# Activar RewriteEngine
+	RewriteEngine on
+	RewriteBase /
+
+
+	# Reescribir URLS solicitada por el usuario
+
+	RewriteRule ^/?inicio/?$ /index.php
+
+#ErrorDocument 404 /not-found.php
+
+	#Páginas
+		# Películas
+		RewriteRule ^/?peliculas/?$ /peliculas.php
+
+		# Personajes
+		RewriteRule ^/?personajes/?$ /peliculas.php
+
+		# Otros - Buscador General
+		RewriteRule ^/?buscar/?$ /peliculas.php
+
+		#May 4th - 4 de mayo (día)
+		RewriteRule ^/?may4/?$ /4mayo.php
+</IfModule>

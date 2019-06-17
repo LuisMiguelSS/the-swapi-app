@@ -4,16 +4,21 @@
 	RewriteEngine on
 	RewriteBase /
 
+	# Error 404
+	#ErrorDocument 404 /404.php
 
-	# Reescribir URLS solicitada por el usuario
+
+	# Reescritura de URLs
 
 	RewriteRule ^/?inicio/?$ /index.php
 
-#ErrorDocument 404 /not-found.php
 
 	#Páginas
 		# Películas
 		RewriteRule ^/?peliculas/?$ /peliculas.php
+
+			# Película Individual
+			RewriteRule ^/?peliculas/([0-9]+)/?$ /verpelicula.php?numero=$1 [L]
 
 		# Personajes
 		RewriteRule ^/?personajes/?$ /personajes.php
@@ -23,4 +28,5 @@
 
 		#May 4th - 4 de mayo (día)
 		RewriteRule ^/?may4/?$ /4mayo.php
+
 </IfModule>

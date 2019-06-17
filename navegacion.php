@@ -20,7 +20,7 @@
 
 				<!-- Título -->
 				<div class="mx-auto my-2 px-3 order-0 order-md-1 position-relative">
-					<a class="site-logo navbar-brand mx-auto" href="/"><i class="fab fa-galactic-senate fa-2x"></i> The Star Wars App</a>
+					<a class="site-logo navbar-brand mx-auto" href="/"><i class="fab fa-galactic-senate fa-2x align-middle"></i> The Star Wars App</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
 						<span class="navbar-toggler-icon"></span>
 					</button>

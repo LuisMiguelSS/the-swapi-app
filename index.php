@@ -1,3 +1,5 @@
+<?php include 'historial.php'; actualizar(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +17,23 @@
 
 	<!-- Cuerpo -->
 	<main>
-		<!-- ... -->
+		<!-- Título -->
+		<section class="jumbotron text-center text-white border-0 h-50" id="inicio">
+			<h1>¡Bienvenido a la <span> Star Wars Swapi APP</span>!</h1>
+		</section>
+		<div class="container">
+			<section class="jumbotron">
+				<h3 class="display-3">Categorías</h3>
+
+				<!-- Navegación Categorizada -->
+				<div class="row justify-content-around">
+					<div class="col border round"></div>
+					<div class="col border round"></div>
+					<div class="col border round"></div>
+					<div class="col border round"></div>
+				</div>
+			</section>
+		</div>
 	</main>
 
 	<?php

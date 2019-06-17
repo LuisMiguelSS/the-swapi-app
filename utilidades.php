@@ -74,6 +74,35 @@
     //Fin de la función
     }
 
+    /**
+    * Al no poseer el API de imágenes, aquellas nuevas películas que no
+    * hayan sido actualizadas con una portada se les establecerá
+    * una imagen de una cámara.
+    * @param int Número de la película
+    * @return string Devuelve la ruta relativa hasta donde se encuentra
+    * la imagen correspondiente con el episodio.
+    */
+    function obtenerImagenPelicula($numero) {
+        switch ($numero) {
+            case 1: return 'assets/tpm-episode1.jpg';
+            
+            case 2: return 'assets/aotc-episode2.jpg';
+
+            case 3: return 'assets/rots-episode3.jpg';
+
+            case 4: return 'assets/anh-episode4.jpg';
+
+            case 5: return 'assets/tesb-episode5.jpg';
+
+            case 6: return 'assets/rotj-episode6.jpg';
+
+            case 7: return 'assets/tfa-episode7.jpg.jpg';
+
+            // En caso de ser una película de la que no se posea imagen
+            default: return 'assets/unknown-film.png';
+        }
+    }
+
 
     // NO ENCONTRADO
 

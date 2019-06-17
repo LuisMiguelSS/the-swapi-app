@@ -11,6 +11,7 @@
 	# Reescritura de URLs
 
 	RewriteRule ^/?inicio/?$ /index.php
+	RewriteRule ^/borrar.php/?$ /index.php
 
 
 	#Páginas

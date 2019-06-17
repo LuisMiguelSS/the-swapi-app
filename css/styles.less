@@ -1,5 +1,5 @@
 // Variables
-@swYellow: #FFE300;
+@amarilloStarWars: #FFE300;
 
 // Star Jedi Font
 @font-face {
@@ -11,24 +11,65 @@
 }
 
 
+/*************************
+		Inicio
+*********************/
+#inicio {
+	background-image: url('../assets/death-star-wallpaper.jpg');
+	background-size: cover;
+	background-position: right;
+	background-repeat: no-repeat;
+
+	font-family: 'Roboto';
+}
+
+#inicio span {
+	font-family: 'star_jediregular';
+	text-transform: uppercase;
+	color: @amarilloStarWars;
+}
+
+
+/*************************
+		Navegación
+*********************/
 .navbar {
 
 	.site-logo {
 		font-family: 'star_jediregular';
 		text-transform: uppercase;
-		color: @swYellow;
+		color: @amarilloStarWars;
 
 		&:hover {
-			color: @swYellow;
+			color: @amarilloStarWars;
 		}
 	}
 
 }
 
+
+/*************************
+		Películas
+*********************/
 *[data-toggle="collapse"] {
 	vertical-align: middle;
 }
 
 .smaller-icon {
-	font-size: 12px;
+	font-size: 9px;
+}
+
+#fichaPelicula img {
+	max-width: 200px;
+}
+
+
+/*************************
+		Footer
+*********************/
+
+footer a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
 }

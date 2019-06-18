@@ -13,8 +13,10 @@
   <br>
 
 </h2>
+
 ## Star Wars API
-Este proyecto contiene un funcionamiento meramente visual que obtiene datos desde la API de Star Wars (ver: [swapi.co](https://swapi.co)).
+Este proyecto contiene un funcionamiento meramente visual que obtiene datos desde la API de Star Wars - ver: [swapi.co](https://swapi.co)
+
 SWAPI se basa en [JSON](https://swapi.co/documentation#json) para la distribución de contenido, siendo posible obtenerlo en [Wookiee](https://swapi.co/documentation#wookiee).
 
 [Ver más detalles](https://swapi.co/documentation)

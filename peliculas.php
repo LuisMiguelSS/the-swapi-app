@@ -49,6 +49,7 @@
 					<div class="card">
 						<div class="card-body">
 
+							<!-- Información Básica -->
 							<h3 class="card-title"><?= $pelicula['title']; ?></h3>
 							<h5 class="card-subtitle mb-2 text-muted d-inline">
 								Episodio <?= representacionRomana($pelicula['episode_id']); ?> - <span class="text-body"><?= date('j F, Y',strtotime($pelicula['release_date'])); ?></span>
@@ -84,24 +85,35 @@
 		include 'pie_pagina.php';
 		include 'scripts.php';
 	?>
-	<!-- Script para buscar -->
+	
+	<!-- Script Buscador de películas -->
 	<script type="text/javascript">
+		/**
+		* Esta función permite visualizar aquello que se busque ocultando el resto
+		* de elementos contenidos en el "contenedor" de películas.
+		*/
 		function buscarPelicula() {
-			var entrada, filtro, contenedor, carta, h3, i, txtValue;
-			    entrada = document.getElementById("buscadorPeliculas");
-			    filtro = entrada.value.toUpperCase();
+			var buscador, valorBuscado, contenedor, lista, itemsResultado, i, texto;
+
+				// Búsqueda
+			    buscador = document.getElementById("buscadorPeliculas");
+			    valorBuscado = buscador.value.toUpperCase();
+
+			    //Situación en el DOM
 			    contenedor = document.getElementById("contenedorPeliculas");
-			    carta = contenedor.getElementsByClassName("pelicula");
+			    lista = contenedor.getElementsByClassName("pelicula");
 
 
-			    for (i = 0; i < carta.length; i++) {
-			        h3 = carta[i].getElementsByTagName("h3")[0];
-			        txtValue = h3.textContent || h3.innerText;
-			        if (txtValue.toUpperCase().indexOf(filtro) > -1) {
-			            carta[i].style.display = "";
-			        } else {
-			            carta[i].style.display = "none";
-			        }
+			    // Iterar por los elementos contenidos en "lista"
+			    for (i = 0; i < lista.length; i++) {
+			        itemsResultado = lista[i].getElementsByTagName("h3")[0];
+			        texto = itemsResultado.textContent || itemsResultado.innerText;
+
+			        //Comprobar que coincida el texto con lo buscado
+			        if (texto.toUpperCase().indexOf(valorBuscado) > -1)
+			            lista[i].style.display = "";
+			        else
+			            lista[i].style.display = "none"; // ocultar elemento
 			    }
 		}
 	</script>

@@ -1,5 +1,5 @@
 
-<h1><a href="https://github.com/LuisMiguelss/the-swapi-app"><img src="https://raw.githubusercontent.com/LuisMiguelSS/the-swapi-app/master/assets/icons/darthvader.png" alt="Resources" width="20"></a> The SWAPI App</h1>
+<h1><a href="https://github.com/LuisMiguelss/the-swapi-app"><img src="https://raw.githubusercontent.com/LuisMiguelSS/the-swapi-app/master/assets/icons/darthvader.png" alt="Resources" width="20"> The SWAPI App</a></h1>
 
 ## Star Wars API
 Este proyecto contiene un funcionamiento meramente visual que obtiene datos desde la API de Star Wars (ver: [swapi.co](https://swapi.co)).

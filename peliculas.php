@@ -41,7 +41,7 @@
 			</div>
 		</div>
 
-		<!-- Películas Miniatura -->
+		<!-- Miniaturas de películas -->
 		<div class="row justify-content-around" id="contenedorPeliculas">
 			
 			<?php foreach (ordenarPor($peliculas['results'],'episode_id') as $pelicula) { ?>
@@ -85,7 +85,7 @@
 		include 'pie_pagina.php';
 		include 'scripts.php';
 	?>
-	
+
 	<!-- Script Buscador de películas -->
 	<script type="text/javascript">
 		/**

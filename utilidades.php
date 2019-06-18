@@ -103,6 +103,41 @@
         }
     }
 
+    /**
+    * Dada una cadena, devuelve otra traducida
+    * con los climas correspondientes en este caso de los planetas.
+    */
+    function obtenerClima($cadena) {
+        $vector = explode(',',$cadena);
+        $resultado = '';
+
+        for ($i=0; $i < count($vector); $i++) {
+
+            switch ($cadena) {
+                case 'temperate':
+                    $resultado .= 'templado';
+                    break;
+
+                case 'tropical':
+                    $resultado .= 'tropical';
+                    break;
+
+                case 'arid':
+                    $resultado .= 'árido';
+                    break;
+
+                default:
+                    $resultado .= 'desconocido';
+                    break;
+            }
+
+            if(count($vector) > 1 && $i < count($vector)) $resultado .= ', ';
+        }
+
+        return $resultado;
+
+    }
+
 
     // NO ENCONTRADO
 

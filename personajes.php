@@ -22,7 +22,7 @@
 		// Menú de navegación
 
 		include 'navegacion.php';
-		nav('peliculas');
+		nav('personajes');
 	?>
 
 	<!-- Cuerpo -->

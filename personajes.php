@@ -37,7 +37,6 @@
 		<div class="container">
 			<ul class="list-group row">
 				<?php
-
 					// Obtener el nombre del personaje
 					foreach($personas->results as $persona) { ?>
 						<li class="list-group-item col-md-6 mx-auto"><?= $persona->name; ?></li>

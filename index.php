@@ -18,7 +18,7 @@
 	<!-- Cuerpo -->
 	<main>
 		<!-- Título -->
-		<section class="jumbotron text-center text-white border-0 h-50" id="inicio">
+		<section class="jumbotron text-center text-white h-50" id="inicio">
 			<h1>¡Bienvenido a la <span> Star Wars Swapi APP</span>!</h1>
 		</section>
 

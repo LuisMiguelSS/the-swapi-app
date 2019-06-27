@@ -132,6 +132,7 @@
 
                 case 'murky':
                     $resultado .= 'lóbrego';
+                    break;
 
                 default:
                     $resultado .= 'desconocido';

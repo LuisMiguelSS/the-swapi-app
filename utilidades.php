@@ -126,6 +126,13 @@
                     $resultado .= 'árido';
                     break;
 
+                case 'frozen':
+                    $resultado -= 'congelado';
+                    break;
+
+                case 'murky':
+                    $resultado .= 'lóbrego';
+
                 default:
                     $resultado .= 'desconocido';
                     break;

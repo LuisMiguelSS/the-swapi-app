@@ -9,12 +9,12 @@
   ![php](https://img.shields.io/badge/php-7.3.3-blue.svg)
   ![bootstrap](https://img.shields.io/badge/bootstrap-v4-red.svg)
   ![jquery](https://img.shields.io/badge/jquery-v3.4.1-green.svg)
-
+<br>
 </h3>
 
-<br>
+
 ## Star Wars API
-Este proyecto contiene un funcionamiento meramente visual que obtiene datos desde la API de Star Wars - ver: [swapi.co](https://swapi.co)
+Este proyecto contiene un funcionamiento meramente visual que obtiene datos desde la API de Star Wars, ver: [swapi.co](https://swapi.co)
 
 SWAPI se basa en [JSON](https://swapi.co/documentation#json) para la distribución de contenido, siendo posible obtenerlo en [Wookiee](https://swapi.co/documentation#wookiee).
 

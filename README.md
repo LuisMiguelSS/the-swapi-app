@@ -3,17 +3,16 @@
 <h1><a href="https://github.com/LuisMiguelss/the-swapi-app"><img src="https://raw.githubusercontent.com/LuisMiguelSS/the-swapi-app/master/assets/icons/darthvader.png" alt="Resources" width="20"> The SWAPI App</a></h1>
 
 <!-- Badges -->
-<h2 align="center">
+<h3 align="center">
 
   ![repo size](https://img.shields.io/github/repo-size/LuisMiguelSS/the-swapi-app.svg?colorB=red)
   ![php](https://img.shields.io/badge/php-7.3.3-blue.svg)
   ![bootstrap](https://img.shields.io/badge/bootstrap-v4-red.svg)
   ![jquery](https://img.shields.io/badge/jquery-v3.4.1-green.svg)
 
-  <br>
+</h3>
 
-</h2>
-
+<br>
 ## Star Wars API
 Este proyecto contiene un funcionamiento meramente visual que obtiene datos desde la API de Star Wars - ver: [swapi.co](https://swapi.co)
 

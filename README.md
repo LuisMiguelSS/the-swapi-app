@@ -25,6 +25,6 @@ Este proyecto se encuentra alojado en [000webhostapp.com](https://the-swapi-app.
 
 Este proyecto se seguirá actualizando ya que algunas pestañas pensadas para contener información extra (como "May 4th" y "Buscar") no han sido rellenas.
 
-Como consecuencia: dichas páginas no se guardarán en el historial.
+Como consecuencia, dichas páginas no se guardarán en el historial.
 
 Made with :heart: by [@LuisMiguelSS](https://luismiguelss.github.io/me)

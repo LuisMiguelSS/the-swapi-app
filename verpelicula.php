@@ -1,6 +1,6 @@
 <?php
 
-	include 'historial.php';
+	require 'historial.php';
 	actualizar();
 
 	//Comprobar que haya recibido un ID
@@ -11,7 +11,7 @@
 
 	} else {
 
-		include 'utilidades.php';
+		require 'utilidades.php';
 
 		//Ampliar tiempo de espera a 3 min, JSON puede tardar
 		set_time_limit(180);
@@ -26,7 +26,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'cabecera.php'; ?>
+	<?php require 'cabecera.php'; ?>
 	<title>The Swapi App - <?= $pelicula->title; ?></title>
 </head>
 <body>
@@ -34,7 +34,7 @@
 	<?php
 		// Menú de navegación
 
-		include 'navegacion.php';
+		require 'navegacion.php';
 		nav('peliculas');
 	?>
 
@@ -107,8 +107,8 @@
 	</main>
 
 	<?php
-		include 'pie_pagina.php';
-		include 'scripts.php';
+		require 'pie_pagina.php';
+		require 'scripts.php';
 	?>
 
 </body>

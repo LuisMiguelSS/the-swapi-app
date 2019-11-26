@@ -56,7 +56,7 @@
 							</h5>
 							
 							<!-- Sinopsis -->
-							<a class="collapsed d-block" data-toggle="collapse" href="#sinopsis<?= $pelicula['episode_id']; ?>" aria-expanded="false" aria-controls="sinopsis<?= $pelicula['episode_id']; ?>">
+							<a class="collapsed d-block" data-toggle="collapse" href="#sinopsis<?= rawurlencode($pelicula['episode_id']); ?>" aria-expanded="false" aria-controls="sinopsis<?= $pelicula['episode_id']; ?>">
 								Sinopsis <i class="fas fa-chevron-down"></i>
 							</a>
 							<div class="collapse text-center" id="sinopsis<?= $pelicula['episode_id']; ?>">

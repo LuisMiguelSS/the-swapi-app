@@ -17,7 +17,7 @@
 
 					<!-- Lista de Enlaces del historial -->
 					<ul class="list-group">
-						<?php foreach (array_reverse($_SESSION['historial']) as $enlace) { ?>
+						<?php foreach (array_reverse(filter_input_array($_SESSION['historial'])) as $enlace) { ?>
 							
 								<li class="list-group-item"><a class="text-secondary" href="<?= $enlace; ?>"><?= $enlace; ?></a></li>
 

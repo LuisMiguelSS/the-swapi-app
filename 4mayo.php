@@ -1,9 +1,9 @@
 <?php
 
-	include 'historial.php';
+	require 'historial.php';
 	actualizar();
 	
-	include 'utilidades.php';
+	require 'utilidades.php';
 
 	//Obtener películas del API (swapi.co/api/films/) como array
 	@$peliculas = json_decode(file_get_contents('https://swapi.co/api/films/'),true);
@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'cabecera.php'; ?>
+	<?php require 'cabecera.php'; ?>
 	<title>The Swapi App - May The Force Be With You</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
 	<?php
 		// Menú de navegación
 
-		include 'navegacion.php';
+		require 'navegacion.php';
 		nav('may4');
 	?>
 
@@ -38,8 +38,8 @@
 	</main>
 
 	<?php
-		include 'pie_pagina.php';
-		include 'scripts.php';
+		require 'pie_pagina.php';
+		require 'scripts.php';
 	?>
 </body>
 </html>

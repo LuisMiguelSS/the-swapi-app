@@ -1,5 +1,10 @@
 <?php
 
+    // BASE URL
+    function api_base_url() {
+        return 'https://swapi.dev/api/';
+    }
+
     // TRABAJO CON ARRAYS
 
     /**

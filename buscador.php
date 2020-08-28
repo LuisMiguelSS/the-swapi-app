@@ -5,8 +5,7 @@
 	
 	include 'utilidades.php';
 
-	//Obtener películas del API (swapi.co/api/films/) como array
-	@$peliculas = json_decode(file_get_contents('https://swapi.co/api/films/'),true);
+	@$peliculas = json_decode(file_get_contents(api_base_url() . 'films/'),true);
 
 ?>
 

@@ -1,8 +1,8 @@
-<!-- Pie de Página -->
+<!-- Footer -->
 <footer class="text-center py-3 bg-dark text-light">
 	<a href="" data-toggle="modal" data-target="#historial">Ver historial</a>
 
-	<!-- Historial -->
+	<!-- History -->
 	<div class="modal fade" id="historial" tabindex="-1" role="dialog" aria-labelledby="historial" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable" role="document">
 
@@ -15,7 +15,7 @@
 				</div>
 				<div class="modal-body">
 
-					<!-- Lista de Enlaces del historial -->
+					<!-- History list of links -->
 					<ul class="list-group">
 						<?php foreach (array_reverse(filter_input_array($_SESSION['historial'])) as $enlace) { ?>
 							
@@ -36,5 +36,5 @@
 			</div>
 		</div>
 	</div>
-	© 2019 Copyright <a href="https://luismiguelss.github.io/me/"> Luis Miguel Soto Sánchez</a>
+	© <?= date("Y"); ?> Copyright <a href="https://luismiguelsoto.com"> Luis Miguel Soto Sánchez</a>
 </footer>

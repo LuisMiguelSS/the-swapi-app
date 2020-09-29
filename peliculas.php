@@ -5,7 +5,7 @@
 	
 	include 'utilidades.php';
 
-	@$peliculas = json_decode(file_get_contents(api_base_url() . 'films/'),true);
+	@$peliculas = json_decode(query_url(api_base_url() . 'films/'), true);//file_get_contents(api_base_url() . 'films/'),true);
 
 ?>
 
@@ -18,21 +18,20 @@
 <body>
 
 	<?php
-		// Menú de navegación
-
+		// Navigation Menu
 		include 'navegacion.php';
 		nav('peliculas');
 	?>
 
-	<!-- Cuerpo -->
+	<!-- Body -->
 	<main class="container py-3 px-5">
 
-		<!-- Título -->
+		<!-- Title -->
 		<section class="jumbotron text-center">
 			<i class="fas fa-film fa-5x d-inline"></i><h1 class="display-3 d-inline"> Películas</h1>
 		</section>
 
-		<!-- Buscador -->
+		<!-- Searcher -->
 		<div class="input-group my-2 mx-auto">
 			<input type="text" class="form-control" id="buscadorPeliculas" onkeyup="buscarPelicula()" placeholder="Nombre de la película..." title="Introduce un título">
 			<div class="input-group-append">
@@ -40,7 +39,7 @@
 			</div>
 		</div>
 
-		<!-- Miniaturas de películas -->
+		<!-- Film Miniatures -->
 		<div class="row justify-content-around" id="contenedorPeliculas">
 			
 			<?php foreach (ordenarPor($peliculas['results'],'episode_id') as $pelicula) { ?>
@@ -48,13 +47,13 @@
 					<div class="card">
 						<div class="card-body">
 
-							<!-- Información Básica -->
+							<!-- Basic Info -->
 							<h3 class="card-title"><?= $pelicula['title']; ?></h3>
 							<h5 class="card-subtitle mb-2 text-muted d-inline">
-								Episodio <?= representacionRomana($pelicula['episode_id']); ?> - <span class="text-body"><?= date('j F, Y',strtotime($pelicula['release_date'])); ?></span>
+								Episodio <?= to_roman_numerals($pelicula['episode_id']); ?> - <span class="text-body"><?= date('j F, Y',strtotime($pelicula['release_date'])); ?></span>
 							</h5>
 							
-							<!-- Sinopsis -->
+							<!-- Synopsis -->
 							<a class="collapsed d-block" data-toggle="collapse" href="#sinopsis<?= rawurlencode($pelicula['episode_id']); ?>" aria-expanded="false" aria-controls="sinopsis<?= $pelicula['episode_id']; ?>">
 								Sinopsis <i class="fas fa-chevron-down"></i>
 							</a>
@@ -64,7 +63,7 @@
 
 							<hr />
 
-							<!-- Ver más -->
+							<!-- View More -->
 							<a href="/peliculas/<?= $pelicula['episode_id']; ?>/" target="_blank">
 								Ver detalles <sup><i class="fas fa-external-link-alt smaller-icon"></i></sup>
 							</a>
@@ -85,34 +84,30 @@
 		include 'scripts.php';
 	?>
 
-	<!-- Script Buscador de películas -->
+	<!-- Film Searcher -->
 	<script type="text/javascript">
-		/**
-		* Esta función permite visualizar aquello que se busque ocultando el resto
-		* de elementos contenidos en el "contenedor" de películas.
-		*/
 		function buscarPelicula() {
 			var buscador, valorBuscado, contenedor, lista, itemsResultado, i, texto;
 
-				// Búsqueda
+				// Search
 			    buscador = document.getElementById("buscadorPeliculas");
 			    valorBuscado = buscador.value.toUpperCase();
 
-			    //Situación en el DOM
+			    // Location at DOM
 			    contenedor = document.getElementById("contenedorPeliculas");
 			    lista = contenedor.getElementsByClassName("pelicula");
 
 
-			    // Iterar por los elementos contenidos en "lista"
+			    // Iterate over the DOM list
 			    for (i = 0; i < lista.length; i++) {
 			        itemsResultado = lista[i].getElementsByTagName("h3")[0];
 			        texto = itemsResultado.textContent || itemsResultado.innerText;
 
-			        //Comprobar que coincida el texto con lo buscado
+			        // Check for coincidences in text
 			        if (texto.toUpperCase().indexOf(valorBuscado) > -1)
 			            lista[i].style.display = "";
 			        else
-			            lista[i].style.display = "none"; // ocultar elemento
+			            lista[i].style.display = "none";
 			    }
 		}
 	</script>

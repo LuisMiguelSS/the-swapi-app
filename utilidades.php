@@ -2,17 +2,24 @@
 
     // BASE URL
     function api_base_url() {
-        return 'https://swapi.dev/api/';
+        return 'http://swapi.dev/api/';
     }
 
-    // TRABAJO CON ARRAYS
+    function query_url($url) {
+        $context = stream_context_create(array('http' => array('header'=>'Connection: close\r\n')));
+        return file_get_contents($url, false, $context);
+    }
+
+    function get_headers_query($url) {
+        return @get_headers(file_get_contents($url));
+    }
 
     /**
-    * Dado un número, se realiza la conversión en sus letras romanas (M,C,D,L,X,V y I)
-    * @param int Número
-    * @return string Resultado
+    * Given a number, it converts it into Roman numerals.
+    * @param int Number to convert
+    * @return string Result in Roman numerals
     */
-    function representacionRomana($numero) {
+    function to_roman_numerals($numero) {
         $resultado = '';
         $mapa = array('M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400, 'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40, 'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1);
 
@@ -36,7 +43,7 @@
     * @param string Campo por el que ordenar
     * @return array Array resultado
     */
-    function ordenarPor($array,$campo) {
+    function ordenarPor($array, $campo) {
         $codigo_funcion_reemplazo = "return strnatcmp(\$a['$campo'], \$b['$campo']);";
         usort($array, create_function('$a,$b', $codigo_funcion_reemplazo));
 
@@ -54,10 +61,10 @@
     * de reordenación de arrays, ya que no sería tan eficiente.
     * @param int Número de película
     * @return int posicion en la API o -1 si el número de película introducido no existe
-    * @see https://swapi.co/documentation
+    * @see https://swapi.dev/documentation
     */
     function obtenerIDPeliculaSWAPI($numero) {
-        $numero_peliculas_total = json_decode(file_get_contents('https://swapi.co/api/films/'),true)['count'];
+        $numero_peliculas_total = json_decode(file_get_contents(api_base_url() . 'films/'),true)['count'];
 
         if( $numero > $numero_peliculas_total || $numero < 1) {
             return -1; //La película no existe

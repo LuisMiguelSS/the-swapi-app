@@ -17,7 +17,7 @@
 		set_time_limit(180);
 
 		//Obtener información de la película como Objeto
-		@$pelicula = json_decode(file_get_contents('https://swapi.co/api/films/'.obtenerIDPeliculaSWAPI($_GET['numero'])));
+		@$pelicula = json_decode(query_url(api_base_url() . 'films/'.obtenerIDPeliculaSWAPI($_GET['numero'])));
 
 	}
 
@@ -55,7 +55,7 @@
 							<h1 class="d-inline"><?= $pelicula->title; ?></h1>
 							<img class="img-thumbnail float-right d-block" src="<?= obtenerImagenPelicula($_GET['numero']); ?>" alt="<?= $pelicula->title; ?> poster">
 							<h3 class="mb-2 text-muted">
-								Episodio <?= representacionRomana($pelicula->episode_id); ?>
+								Episodio <?= to_roman_numerals($pelicula->episode_id); ?>
 							
 							</h3>
 							<h4>Fecha de estreno: <?= date('l jS, F Y',strtotime($pelicula->release_date)); ?></h4>

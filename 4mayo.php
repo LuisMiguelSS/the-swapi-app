@@ -16,16 +16,16 @@
 <body>
 
 	<?php
-		// Menú de navegación
+		// Navigation menu
 
 		require 'navegacion.php';
 		nav('may4');
 	?>
 
-	<!-- Cuerpo -->
+	<!-- Body -->
 	<main class="container py-3 px-5">
 
-		<!-- Título -->
+		<!-- Title -->
 		<section class="jumbotron text-center">
 			<img src="assets/icons/darthvader.png" class="img-responsive" width="90"><h1 class="display-3 d-inline"> May 4<sup>th</sup></h1>
 		</section>

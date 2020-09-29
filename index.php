@@ -9,20 +9,19 @@
 <body>
 
 	<?php
-		// Menú de navegación
-
+		// Navigation Menu
 		include 'navegacion.php';
 		nav('index');
 	?>
 
-	<!-- Cuerpo -->
+	<!-- Body -->
 	<main>
-		<!-- Título -->
+		<!-- Title -->
 		<section class="jumbotron text-center text-white h-50" id="inicio">
 			<h1>¡Bienvenido a la <span> Star Wars Swapi APP</span>!</h1>
 		</section>
 
-		<!-- Categorías -->
+		<!-- Categories -->
 		<div class="container">
 			<div class="jumbotron text-center">
 				<h3 class="display-3">Categorías</h3>
@@ -30,7 +29,7 @@
 		</div>
 			<div class="d-flex row justify-content-around mx-5" id="categorias">
 
-				<!-- Películas -->
+				<!-- Films/Movies -->
 				<div class="col-8 col-md-4 m-3 align-self-center">
 					<a href="/peliculas/">
 						<div class="card align-items-center">
@@ -40,7 +39,7 @@
 					</a>
 				</div>
 
-				<!-- Personajes -->
+				<!-- Characters -->
 				<div class="col-8 col-md-4 m-3 align-self-center">
 					<a href="/personajes/">
 						<div class="card align-items-center py-3">
@@ -50,7 +49,7 @@
 					</a>
 				</div>
 
-				<!-- Buscador -->
+				<!-- Searcher -->
 				<div class="col-8 col-md-4 m-3 align-self-center">
 					<a href="/buscar/">
 						<div class="card align-items-center py-3">
